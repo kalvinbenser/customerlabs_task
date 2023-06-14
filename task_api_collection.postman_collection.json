@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "f02c5972-4397-48f2-b96e-772deb7721f2",
+		"name": "task_api_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16903062"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"account_name\": \"test\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/account",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/account",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/account/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account By id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test123@gmail.com\",\r\n    \"account_name\": \"kk\"\r\n  \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/account/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/account/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destination",
+			"item": [
+				{
+					"name": "Create Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"/profile2\",\r\n    \"http\": \"get\",\r\n     \"headers\": {\r\n        \"APP_ID\": \"1234APPID1234\",\r\n        \"APP_SECTET\": \"enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s\",\r\n        \"ACTION\": \"profile.get\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"account_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/destination",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Destination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/destination",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"destination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Destination By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/destination/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Destination By id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"/login\",\r\n    \"http\": \"post\",\r\n    \"headers\": {\r\n        \"APP_ID\": \"1234APPID1234\",\r\n        \"APP_SECTET\": \"enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s\",\r\n        \"ACTION\": \"kalvin\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"account_id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/destination/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Destination By id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/destination/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"destination",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all destination By account id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/account/:id/destinations",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"account",
+								":id",
+								"destinations"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Handler",
+			"item": [
+				{
+					"name": "server/incomming_data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "CL-X-TOKEN",
+								"value": "d1ba621e-6c96-454c-9212-d50c6f0c0e81",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"kalvin 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/server/incoming_data",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"server",
+								"incoming_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/server/send_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":\"vvvv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4444/server/send_data",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"server",
+								"send_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "server/send_data?data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4444/server/send_data?data=\"kalvin\"",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"server",
+								"send_data"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "\"kalvin\""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
