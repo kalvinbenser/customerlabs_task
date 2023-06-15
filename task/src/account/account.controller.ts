@@ -15,7 +15,6 @@ import { Prisma } from '@prisma/client';
 @Controller()
 export class AccountController {
   constructor(private readonly accountService: AccountService) {}
-  //------------------------ Data handler Module--------------------------\\
 
   @Get('account')
   async getAllAccount(): Promise<any> {
